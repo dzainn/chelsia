@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for u</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="audio-box">
+      <audio loop autoplay id="audio-player" muted="muted" type="audio/mp3">
+        <source src="music.mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="controls1">
+        <div class="controlsb">
+          <button id="play-btn">Play</button>
+          <button id="pause-btn">Pause</button>
+          <button id="mute-btn">Mute</button>
+        </div>
+        <span id="duration">00:00 / 00:00</span>
+        <div class="contorls2">
+          <input
+            required
+            style="background-color: pink"
+            id="volume-slider"
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+          />
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- <label for="userInput">Masukkan Namamu</label>
+        <input
+          type="text"
+          id="userInput"
+          name="userInput"
+          placeholder="Ketik di sini..."
+          /> -->
+      <div class="pesan container" style="display: block">
+        <img id="gift" src="assets/start.gif" alt="" />
+        <h1>gimana kabarmu?</h1>
+        <p>semoga kamu baik baik aja ya</p>
+      </div>
+    </main>
+
+    <div class="tempatPesan">
+      <div class="pesan container" style="display: none">
+        <h1>gimana kabarmu?</h1>
+        <p>semoga kamu baik baik aja ya</p>
+      </div>
+      <div class="pesan container" style="display: none">
+        <p>Ini adalah konten kedua.</p>
+      </div>
+      <div class="pesan container" style="display: none">
+        <p style="text-align: start">
+          Tinta ini sudah habis <br />
+          lembaran ini sudah berakhir
+          <br />
+          di halaman terakhir yang tersisa hanyalah namamu yang abadi dalam
+          tulisanku
+        </p>
+      </div>
+    </div>
+    <div id="buttonContainer">
+      <button id="showNextButton">Tampilkan Konten Selanjutnya</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
