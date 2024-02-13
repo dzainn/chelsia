@@ -8,8 +8,9 @@
   </head>
   <body>
     <div class="background-image"></div>
+
     <div class="audio-box">
-      <audio loop autoplay id="audio-player" type="audio/mp3">
+      <audio loop autoplay id="audio-player" muted="muted" type="audio/mp3">
         <source src="music.mp3" />
         Your browser does not support the audio element.
       </audio>
@@ -44,19 +45,55 @@
           /> -->
       <div class="pesan container" style="display: block">
         <img id="gift" src="assets/start.gif" alt="" />
-        <h1>Halo Chelsia</h1>
-        <p>klik tombol dibawah ini</p>
+        <h1>Halo Chelsia maniss</h1>
+        <p>klik tombol dibawah ya...</p>
       </div>
     </main>
 
     <div class="tempatPesan">
       <div class="pesan container" style="display: none">
-        <h1>gimana kabarmu?</h1>
+        <h1>Gimana kabarmu?</h1>
         <p>semoga kamu baik baik aja ya</p>
       </div>
+
       <div class="pesan container" style="display: none">
-        <p>Ini adalah konten kedua.</p>
+        <img
+          id="gif"
+          src="https://media.tenor.com/-aW73OVUtyYAAAAi/tkthao219-bubududu.gif"
+          alt=""
+        />
+        <h1>Kamu tau ga sih?</h1>
+        <p>Udah lama aku tuh suka sama kamu, <br />tiap hari perhatiin kamu</p>
       </div>
+
+      <div class="pesan container" style="display: none">
+        <h1>Besok kan valentine nih?</h1>
+        <p>mau cokelat ga? ga ada kata buat nolak sih</p>
+      </div>
+
+      <div class="pesan container" style="display: none">
+        <img src="assets/cokelat.jpg" alt="" />
+        <h1>nih cokelatnya hehe</h1>
+        <p>maaf cuman bisa ngasih online</p>
+      </div>
+
+      <div class="pesan container" style="display: none">
+        <img
+          src="https://media.tenor.com/RV7dBHVkyMQAAAAi/tkthao219-bubududu.gif"
+          alt=""
+        />
+        <h1>mau cokelat yang asli?</h1>
+        <p>
+          tebak aku siapa ntar ku kasih yg asli... dan kalo tau langsung aja dm
+          ig ku
+        </p>
+      </div>
+
+      <div class="pesan container" style="display: none">
+        <img src="assets/start.gif" alt="" />
+        <h1 style="font-size: 1.8em">SELAMAT HARI VALENTINE ❤️</h1>
+      </div>
+
       <div class="pesan container" style="display: none">
         <p style="text-align: start">
           Tinta ini sudah habis <br />
@@ -67,8 +104,10 @@
         </p>
       </div>
     </div>
+
     <div id="buttonContainer">
-      <button id="showNextButton">Tampilkan Konten Selanjutnya</button>
+      <button id="prevButton" class="button" style="display: none"><</button>
+      <button id="nextButton" class="button">></button>
     </div>
 
     <script src="script.js"></script>

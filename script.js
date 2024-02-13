@@ -26,30 +26,62 @@ let audio = document.getElementById("audio-player");
 //   pesan.className = "tampilkan";
 // }
 
+// Tombol
 var contents = document.querySelectorAll(".pesan");
 var currentIndex = 0;
 
+// Tombol
+var prevButton = document.getElementById("prevButton");
+var nextButton = document.getElementById("nextButton");
+
 // Fungsi untuk menampilkan konten selanjutnya
 function showNextContent() {
+  audio.play();
   // Sembunyikan konten saat ini
   contents[currentIndex].style.display = "none";
 
-  // Pindahkan ke konten selanjutnya
-  currentIndex = (currentIndex + 1) % contents.length;
+  // Pindahkan ke konten selanjutnya jika bukan konten terakhir
+  if (currentIndex < contents.length - 1) {
+    currentIndex++;
+    // Tampilkan konten selanjutnya
+    contents[currentIndex].style.display = "block";
+  }
 
-  // Tampilkan konten selanjutnya
-  contents[currentIndex].style.display = "block";
+  // Menampilkan tombol kembali jika bukan konten pertama
+  if (currentIndex > 0) {
+    prevButton.style.display = "block";
+  }
 
+  // Menyembunyikan tombol selanjutnya jika mencapai konten terakhir
   if (currentIndex === contents.length - 1) {
-    document.getElementById("showNextButton").disabled = true;
+    nextButton.style.display = "none";
   }
 }
 
-console.log(currentIndex);
+// Fungsi untuk menampilkan konten sebelumnya
+function showPreviousContent() {
+  // Sembunyikan konten saat ini
+  contents[currentIndex].style.display = "none";
+
+  // Pindahkan ke konten sebelumnya jika bukan konten pertama
+  if (currentIndex > 0) {
+    currentIndex--;
+    // Tampilkan konten sebelumnya
+    contents[currentIndex].style.display = "block";
+  }
+
+  // Menampilkan tombol selanjutnya
+  nextButton.style.display = "block";
+
+  // Menyembunyikan tombol kembali jika mencapai konten pertama
+  if (currentIndex === 0) {
+    prevButton.style.display = "none";
+  }
+}
+
 // Mengaitkan fungsi dengan klik tombol
-document
-  .getElementById("showNextButton")
-  .addEventListener("click", showNextContent);
+nextButton.addEventListener("click", showNextContent);
+prevButton.addEventListener("click", showPreviousContent);
 
 const audioPlayer = document.getElementById("audio-player");
 const playBtn = document.getElementById("play-btn");
